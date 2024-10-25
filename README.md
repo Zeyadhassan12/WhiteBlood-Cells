@@ -10,6 +10,11 @@ Preprocessing: For each image, the contrast and brightness are adjusted, and var
 Color Segmentation: The program identifies purple-colored pixels, which are likely blood cells, using HSV color thresholding.
 Morphological Transformations: Open, close, erosion, and dilation transformations are applied to clean the binary mask.
 IoU (Intersection over Union) Calculation: The segmented cells are compared to the ground truth images to calculate an IoU score for each image, reflecting the accuracy of cell segmentation.
+
+
+
+
+
 Phase II: Feature Extraction and Classification
 Feature Extraction: Using regionprops from the skimage library, geometrical properties of the segmented cells are extracted, such as area, eccentricity, solidity, perimeter, and Euler number.
 Class Labeling: Blood cell types (e.g., basophils, monocytes, lymphocytes, etc.) are labeled based on the image file path.
